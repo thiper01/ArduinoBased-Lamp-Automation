@@ -81,9 +81,9 @@ void loop() {
     if ((now.hour() == 7 || now.hour() == 16) && color != Red ) {
       Serial.println("Mudando para vermelho");
       onChangeColor(Red);
-    } else if((now.hour() == 8 || now.hour() == 14) && color != Mixed){
+    } else if(((now.hour() >= 8 && now.hour() < 10) || (now.hour() >= 14 && now.hour() < 16)) && color != Mixed){
       onChangeColor(Mixed);
-    } else if(now.hour() == 10 && color != Mixed){
+    } else if((now.hour() >= 10 && now.hour() < 14) && color != White){
       onChangeColor(White);
     } else if(now.hour() == 17 && color != Off){
       off();
