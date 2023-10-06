@@ -13,10 +13,9 @@ char daysOfTheWeek[7][12] = {"Domingo", "Segunda", "Terça", "Quarta", "Quinta",
 
 void onChangeColor(int target) {
   while(color != target){
-    delay(1000);
     Serial.println("Apagando");
     digitalWrite(ledPin, HIGH);
-    delay(1000);
+    delay(2000);
     Serial.println("Acendendo");
     digitalWrite(ledPin, LOW);
     if (color == 3){
@@ -24,6 +23,7 @@ void onChangeColor(int target) {
     }else{
       color++;
     }
+    delay(1500);
   }
 }
 
