@@ -15,7 +15,7 @@ void onChangeColor(int target) {
   while(color != target){
     Serial.println("Apagando");
     digitalWrite(ledPin, HIGH);
-    delay(2000);
+    delay(1000);
     Serial.println("Acendendo");
     digitalWrite(ledPin, LOW);
     if (color == 3){
@@ -48,7 +48,7 @@ void setup() {
     Serial.println("DS3231 OK!"); //IMPRIME O TEXTO NO MONITOR SERIAL
     //REMOVA O COMENTÁRIO DE UMA DAS LINHAS ABAIXO PARA INSERIR AS INFORMAÇÕES ATUALIZADAS EM SEU RTC
     //rtc.adjust(DateTime(F(__DATE__), F(__TIME__))); //CAPTURA A DATA E HORA EM QUE O SKETCH É COMPILADO
-    rtc.adjust(DateTime(2022, 7, 12, 7, 31, 50)); //(ANO), (MÊS), (DIA), (HORA), (MINUTOS), (SEGUNDOS)
+    rtc.adjust(DateTime(2024, 9, 29, 3, 20, 50)); //(ANO), (MÊS), (DIA), (HORA), (MINUTOS), (SEGUNDOS)
   }
   digitalWrite(errorLedPin, LOW);
   off();
