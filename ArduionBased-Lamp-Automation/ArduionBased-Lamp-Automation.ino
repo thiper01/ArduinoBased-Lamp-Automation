@@ -15,7 +15,7 @@ void onChangeColor(int target) {
   while(color != target){
     Serial.println("Apagando");
     digitalWrite(ledPin, HIGH);
-    delay(1000);
+    delay(1500);
     Serial.println("Acendendo");
     digitalWrite(ledPin, LOW);
     if (color == 3){
@@ -23,7 +23,7 @@ void onChangeColor(int target) {
     }else{
       color++;
     }
-    delay(1500);
+    delay(2000);
   }
 }
 
